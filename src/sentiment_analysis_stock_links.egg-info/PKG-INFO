@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sentiment-analysis-stock-links
+Version: 0.0.0
+Summary: A small python package for NLP app
+Home-page: https://github.com/omkarfirame/Sentiment-Analysis-Stock-Links
+Author: omkarfirame
+Author-email: omkarfirame@gmail.com
+Project-URL: Bug Tracker, https://github.com/omkarfirame/Sentiment-Analysis-Stock-Links/issues
+License-File: LICENSE
+
+# Sentiment-Analysis-Stock-Links

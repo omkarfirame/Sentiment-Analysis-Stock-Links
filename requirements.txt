@@ -1,0 +1,6 @@
+langchain
+langchainhub
+langchain_google_genai
+flask
+duckduckgo-search
+-e .
