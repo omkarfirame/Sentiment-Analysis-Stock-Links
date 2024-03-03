@@ -27,7 +27,7 @@ This project utilizes Google Gemini's Large Language Model (LLM) and Langchain f
 2. Navigate to the project directory:
 
    ```
-   cd sentiment_analysis_stock_links
+   cd Sentiment-Analysis-Stock-Links
    ```
 
 3. Install dependencies:
