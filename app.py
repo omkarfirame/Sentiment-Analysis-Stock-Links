@@ -6,7 +6,7 @@ import asyncio
 
 async def main():
     st.title("Web Sentiment Analyzer")
-
+    
     input_text = st.text_input("Enter a keyword:")
     if st.button("Analyze Sentiment"):
         web_scraper = WebScraper()
