@@ -10,7 +10,7 @@ async def main():
     input_text = st.text_input("Enter a keyword:")
     if st.button("Analyze Sentiment"):
         web_scraper = WebScraper()
-        await web_scraper.ddg_search(input_text=input_text,max_results=5)
+        await web_scraper.ddg_search(input_text=input_text,max_results=None)
         response = web_scraper.do_webscraping(json_file="ddgs.json")
 
         url_list = [x['url'] for x in response]
