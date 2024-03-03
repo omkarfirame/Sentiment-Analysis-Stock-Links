@@ -1,10 +1,10 @@
 langchain
 langchainhub
 langchain_google_genai
-flask
 duckduckgo-search
 html2text
 beautifulsoup4
 playwright
-faiss-cpu
+streamlit
+asyncio
 -e .

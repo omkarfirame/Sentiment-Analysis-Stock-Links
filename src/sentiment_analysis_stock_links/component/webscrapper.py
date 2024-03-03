@@ -4,12 +4,13 @@ import html2text
 from langchain.document_loaders import AsyncHtmlLoader
 from langchain.document_transformers import Html2TextTransformer
 import os
+import asyncio
 
 class WebScraper:
     def __init__(self):
         pass
     
-    def ddg_search(self, input_text, max_results=None):
+    async def ddg_search(self, input_text, max_results=None):
         """
         parameter: input_text is a keyword to search
         The function fetch all the url related to given text and saves in json format
@@ -22,14 +23,15 @@ class WebScraper:
         else:
             print("File does not exist.")
 
-        with DDGS() as ddgs:
-            results = [r for r in ddgs.text(f"{input_text}", safesearch="off", timelimit="d", max_results=max_results)]
+        await asyncio.sleep(1)
+        with DDGS() as ddg:
+            results = [r for r in ddg.text(f"{input_text}", safesearch="off", timelimit="d", max_results=max_results)]
         
         # Write list of dictionaries to JSON file
         with open(file_path, "w") as json_file:
             json.dump(results, json_file)
             print("file created successfully")
-    
+
     def do_webscraping(self, json_file):
         """
         parameter: it takes json file
@@ -57,7 +59,7 @@ class WebScraper:
                         'summary': docs_transformed[0].page_content,
                         'title': title,
                         'metadata': metadata,
-                        'clean_content': html2text.html2text(docs_transformed[0].page_content)
+                        'url': url
                     })
             except Exception as e:
                 print(f"An unexpected error occurred: {e}")
